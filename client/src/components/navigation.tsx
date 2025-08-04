@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { SearchDialog } from "./search-dialog";
+import { SearchDialog } from "@/components/search-dialog";
 import { Heart, Menu, Search } from "lucide-react";
 
 export function Navigation() {
