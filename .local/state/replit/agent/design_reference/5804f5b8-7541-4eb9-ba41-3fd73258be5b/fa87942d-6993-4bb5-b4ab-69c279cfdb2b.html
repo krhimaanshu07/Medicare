@@ -1,0 +1,1109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare - AI-Powered Medical Imaging Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'medical-blue': '#0066CC',
+                        'medical-dark': '#004A99',
+                        'medical-light': '#00A3E0',
+                        'medical-tint': '#E6F3FF',
+                        'success': '#00C851',
+                        'warning': '#FF6B35',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0066CC 0%, #00A3E0 100%);
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 102, 204, 0.15);
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50">
+    
+    <!-- @COMPONENT: Navigation [Fixed header with mega menu] -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100" data-implementation="Implement sticky navigation with scroll effects">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-heartbeat text-medical-blue text-2xl mr-2"></i>
+                        <span class="text-2xl font-bold text-gray-900">Medicare</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#products" class="text-gray-600 hover:text-medical-blue px-3 py-2 text-sm font-medium transition-colors">Products</a>
+                        <a href="#solutions" class="text-gray-600 hover:text-medical-blue px-3 py-2 text-sm font-medium transition-colors">Solutions</a>
+                        <a href="#research" class="text-gray-600 hover:text-medical-blue px-3 py-2 text-sm font-medium transition-colors">Research</a>
+                        <a href="#company" class="text-gray-600 hover:text-medical-blue px-3 py-2 text-sm font-medium transition-colors">Company</a>
+                        <a href="#resources" class="text-gray-600 hover:text-medical-blue px-3 py-2 text-sm font-medium transition-colors">Resources</a>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="text-medical-blue hover:text-medical-dark font-medium transition-colors" data-event="click:openSearch">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="bg-medical-blue text-white px-6 py-2 rounded-lg hover:bg-medical-dark transition-colors font-medium" data-event="click:bookDemo">
+                        Book Demo
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-gray-900" data-event="click:toggleMobileMenu">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section [Main banner with interactive demo] -->
+    <section class="relative min-h-screen flex items-center gradient-bg overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <!-- Medical AI technology visualization background -->
+            <div class="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full animate-pulse-slow"></div>
+            <div class="absolute bottom-20 right-10 w-48 h-48 bg-white/5 rounded-full animate-pulse-slow" style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 right-1/4 w-24 h-24 bg-white/10 rounded-full animate-pulse-slow" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="text-white animate-slide-up">
+                    <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        AI-Powered <span class="text-yellow-300">Medical Imaging</span> Revolution
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100 leading-relaxed">
+                        Experience unprecedented speed and quality in MRI and PET imaging with our cutting-edge AI solutions. Reduce scan times by up to 80% while enhancing image clarity.
+                    </p>
+                    
+                    <!-- Key Benefits -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-300">80%</div>
+                            <div class="text-sm text-blue-100">Faster Scans</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-300">FDA</div>
+                            <div class="text-sm text-blue-100">Cleared</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-300">24/7</div>
+                            <div class="text-sm text-blue-100">Support</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-white text-medical-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center" data-event="click:bookDemo">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            Book Free Demo
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-medical-blue transition-colors flex items-center justify-center" data-event="click:watchVideo">
+                            <i class="fas fa-play mr-2"></i>
+                            Watch Demo Video
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Content - Interactive Demo Preview -->
+                <div class="relative animate-fade-in" style="animation-delay: 0.3s;">
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                        <!-- AI brain scan comparison showing before/after -->
+                        <div class="mb-6">
+                            <h3 class="text-white text-xl font-semibold mb-4">Live AI Enhancement Preview</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center">
+                                    <div class="bg-gray-800 rounded-lg p-4 mb-2">
+                                        <!-- Brain MRI scan showing enhancement progress -->
+                                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Original MRI scan" class="w-full h-32 object-cover rounded" />
+                                    </div>
+                                    <div class="text-white text-sm">Original: 4:30</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="bg-gray-800 rounded-lg p-4 mb-2">
+                                        <!-- Enhanced brain MRI with AI processing -->
+                                        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="AI enhanced MRI scan" class="w-full h-32 object-cover rounded" />
+                                    </div>
+                                    <div class="text-yellow-300 text-sm">AI Enhanced: 0:54</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Processing Indicator -->
+                        <div class="bg-white/5 rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-white text-sm">AI Processing</span>
+                                <span class="text-success text-sm">Complete</span>
+                            </div>
+                            <div class="w-full bg-white/20 rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full w-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Trusted Partners [Logo carousel] -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-gray-600 text-lg font-medium mb-8">Trusted by Leading Healthcare Institutions</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
+                    <!-- Healthcare institution logos would go here -->
+                    <div class="flex justify-center items-center h-16 bg-gray-100 rounded-lg">
+                        <span class="text-gray-500 font-semibold">Stanford Health</span>
+                    </div>
+                    <div class="flex justify-center items-center h-16 bg-gray-100 rounded-lg">
+                        <span class="text-gray-500 font-semibold">Mayo Clinic</span>
+                    </div>
+                    <div class="flex justify-center items-center h-16 bg-gray-100 rounded-lg">
+                        <span class="text-gray-500 font-semibold">Johns Hopkins</span>
+                    </div>
+                    <div class="flex justify-center items-center h-16 bg-gray-100 rounded-lg">
+                        <span class="text-gray-500 font-semibold">Cleveland Clinic</span>
+                    </div>
+                    <div class="flex justify-center items-center h-16 bg-gray-100 rounded-lg">
+                        <span class="text-gray-500 font-semibold">Mass General</span>
+                    </div>
+                    <div class="flex justify-center items-center h-16 bg-gray-100 rounded-lg">
+                        <span class="text-gray-500 font-semibold">UCSF Health</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Trusted Partners -->
+
+    <!-- @COMPONENT: Product Showcase [Interactive product cards] -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Revolutionary AI-Powered Solutions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our comprehensive suite of AI tools transforms medical imaging with unprecedented speed and accuracy
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- @MAP: products.map(product => ( -->
+                
+                <!-- Product 1: MedicareHD -->
+                <div class="bg-white rounded-2xl shadow-lg hover-lift p-8 border border-gray-100">
+                    <div class="mb-6">
+                        <!-- High-resolution MRI brain scan showing enhanced detail -->
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300" alt="High-definition MRI brain scan" class="w-full h-48 object-cover rounded-lg" />
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-brain text-medical-blue text-2xl mr-3"></i>
+                            <h3 class="text-2xl font-bold text-gray-900">MedicareHD™</h3>
+                        </div>
+                        <div class="bg-success text-white text-xs px-3 py-1 rounded-full inline-block">FDA CLEARED</div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Ultra-high definition MRI enhancement with advanced denoising and sharpening. Achieve superior image quality in 75% less time.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-success mr-2"></i>
+                            <span>Up to 75% faster acquisition</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-success mr-2"></i>
+                            <span>Enhanced image clarity</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-success mr-2"></i>
+                            <span>All body regions</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-medical-blue text-white py-3 rounded-lg hover:bg-medical-dark transition-colors font-medium" data-event="click:learnMore" data-product="MedicareHD">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Product 2: MedicarePET -->
+                <div class="bg-white rounded-2xl shadow-lg hover-lift p-8 border border-gray-100">
+                    <div class="mb-6">
+                        <!-- PET scan showing cancer detection capabilities -->
+                        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300" alt="PET scan for cancer detection" class="w-full h-48 object-cover rounded-lg" />
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-eye text-medical-blue text-2xl mr-3"></i>
+                            <h3 class="text-2xl font-bold text-gray-900">MedicarePET™</h3>
+                        </div>
+                        <div class="bg-success text-white text-xs px-3 py-1 rounded-full inline-block">CE MARKED</div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        AI-powered PET imaging enhancement that reduces radiation dose by up to 75% while maintaining diagnostic quality.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-success mr-2"></i>
+                            <span>75% dose reduction</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-success mr-2"></i>
+                            <span>4x scan acceleration</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-success mr-2"></i>
+                            <span>Multiple tracers</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-medical-blue text-white py-3 rounded-lg hover:bg-medical-dark transition-colors font-medium" data-event="click:learnMore" data-product="MedicarePET">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Product 3: MedicareSYNTH -->
+                <div class="bg-white rounded-2xl shadow-lg hover-lift p-8 border border-gray-100">
+                    <div class="mb-6">
+                        <!-- Synthetic medical imaging visualization -->
+                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300" alt="Synthetic medical imaging technology" class="w-full h-48 object-cover rounded-lg" />
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-magic text-medical-blue text-2xl mr-3"></i>
+                            <h3 class="text-2xl font-bold text-gray-900">MedicareSYNTH™</h3>
+                        </div>
+                        <div class="bg-warning text-white text-xs px-3 py-1 rounded-full inline-block">BREAKTHROUGH</div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Industry-first synthetic imaging software that generates high-quality images in zero acquisition time.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-success mr-2"></i>
+                            <span>0-minute acquisition</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-success mr-2"></i>
+                            <span>Synthetic STIR imaging</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-success mr-2"></i>
+                            <span>100% acceleration</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-medical-blue text-white py-3 rounded-lg hover:bg-medical-dark transition-colors font-medium" data-event="click:learnMore" data-product="MedicareSYNTH">
+                        Learn More
+                    </button>
+                </div>
+                
+                <!-- @END_MAP )) -->
+            </div>
+
+            <!-- View All Products Button -->
+            <div class="text-center mt-12">
+                <button class="bg-medical-light text-white px-8 py-4 rounded-lg hover:bg-medical-blue transition-colors font-medium" data-event="click:viewAllProducts">
+                    View All Products
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Product Showcase -->
+
+    <!-- @COMPONENT: Interactive Demo Booking [Calendar integration] -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">See Our AI in Action</h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Book a personalized demo and witness how our AI technology can transform your medical imaging workflow.
+                    </p>
+                    
+                    <!-- Demo Benefits -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <i class="fas fa-video text-medical-blue text-lg mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Live Product Demo</h4>
+                                <p class="text-gray-600">See real-time AI enhancement on actual medical images</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-chart-line text-medical-blue text-lg mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">ROI Analysis</h4>
+                                <p class="text-gray-600">Calculate potential time and cost savings for your facility</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-cogs text-medical-blue text-lg mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Integration Planning</h4>
+                                <p class="text-gray-600">Discuss seamless integration with your existing systems</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content - Demo Booking Form -->
+                <div class="bg-medical-tint rounded-2xl p-8">
+                    <form class="space-y-6" data-implementation="Integrate with calendar booking system">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Book Your Demo</h3>
+                            <p class="text-gray-600">Choose your preferred time and we'll set up everything for you.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-medical-blue focus:border-transparent" placeholder="John" data-mock="true">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-medical-blue focus:border-transparent" placeholder="Doe" data-mock="true">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-medical-blue focus:border-transparent" placeholder="john.doe@hospital.com" data-mock="true">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Institution</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-medical-blue focus:border-transparent" placeholder="Hospital/Clinic Name" data-mock="true">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Primary Interest</label>
+                            <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-medical-blue focus:border-transparent" data-mock="true">
+                                <option>MRI Enhancement</option>
+                                <option>PET Imaging</option>
+                                <option>Synthetic Imaging</option>
+                                <option>Complete Suite</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Date & Time</label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <input type="date" class="px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-medical-blue focus:border-transparent" data-mock="true">
+                                <select class="px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-medical-blue focus:border-transparent" data-mock="true">
+                                    <option>9:00 AM</option>
+                                    <option>10:00 AM</option>
+                                    <option>11:00 AM</option>
+                                    <option>2:00 PM</option>
+                                    <option>3:00 PM</option>
+                                    <option>4:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bg-medical-blue text-white py-4 rounded-lg hover:bg-medical-dark transition-colors font-semibold" data-event="click:submitDemo">
+                            Schedule Demo
+                        </button>
+
+                        <p class="text-sm text-gray-500 text-center">
+                            No commitment required. Cancel anytime.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Interactive Demo Booking -->
+
+    <!-- @COMPONENT: Case Studies [Clinical validation results] -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Proven Clinical Results</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Real-world outcomes from leading healthcare institutions using our AI technology
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Case Study 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift">
+                    <div class="mb-6">
+                        <!-- Modern hospital radiology department -->
+                        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300" alt="Modern hospital radiology department" class="w-full h-48 object-cover rounded-lg" />
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Stanford Medical Center</h3>
+                        <div class="text-medical-blue font-semibold">60% Reduction in Scan Time</div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Implementation of MedicareHD resulted in significant workflow improvements and higher patient satisfaction scores.
+                    </p>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Patient Throughput</span>
+                            <span class="font-semibold text-success">+65%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Image Quality Score</span>
+                            <span class="font-semibold text-success">9.2/10</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">ROI Period</span>
+                            <span class="font-semibold text-success">8 months</span>
+                        </div>
+                    </div>
+                    <button class="text-medical-blue font-medium hover:text-medical-dark transition-colors" data-event="click:readCase">
+                        Read Full Case Study →
+                    </button>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift">
+                    <div class="mb-6">
+                        <!-- Healthcare professionals analyzing medical scans -->
+                        <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300" alt="Healthcare professionals analyzing medical scans" class="w-full h-48 object-cover rounded-lg" />
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Mayo Clinic Network</h3>
+                        <div class="text-medical-blue font-semibold">75% Dose Reduction Achieved</div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        MedicarePET implementation across 12 facilities demonstrated significant radiation dose reduction without compromising diagnostic accuracy.
+                    </p>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Radiation Dose</span>
+                            <span class="font-semibold text-success">-75%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Diagnostic Accuracy</span>
+                            <span class="font-semibold text-success">98.5%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Patient Comfort</span>
+                            <span class="font-semibold text-success">+40%</span>
+                        </div>
+                    </div>
+                    <button class="text-medical-blue font-medium hover:text-medical-dark transition-colors" data-event="click:readCase">
+                        Read Full Case Study →
+                    </button>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift">
+                    <div class="mb-6">
+                        <!-- Advanced medical imaging equipment -->
+                        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300" alt="Advanced medical imaging equipment" class="w-full h-48 object-cover rounded-lg" />
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Cleveland Clinic</h3>
+                        <div class="text-medical-blue font-semibold">Zero-Time Synthetic Imaging</div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        First clinical deployment of MedicareSYNTH achieved unprecedented workflow efficiency with synthetic STIR imaging.
+                    </p>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">STIR Acquisition</span>
+                            <span class="font-semibold text-success">0 minutes</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Image Quality</span>
+                            <span class="font-semibold text-success">Superior</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Workflow Efficiency</span>
+                            <span class="font-semibold text-success">+85%</span>
+                        </div>
+                    </div>
+                    <button class="text-medical-blue font-medium hover:text-medical-dark transition-colors" data-event="click:readCase">
+                        Read Full Case Study →
+                    </button>
+                </div>
+            </div>
+
+            <!-- View All Case Studies -->
+            <div class="text-center mt-12">
+                <button class="bg-medical-blue text-white px-8 py-4 rounded-lg hover:bg-medical-dark transition-colors font-medium" data-event="click:viewAllCases">
+                    View All Case Studies
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Case Studies -->
+
+    <!-- @COMPONENT: Company Information [Team and values] -->
+    <section id="company" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Company Vision -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Leading the Future of Medical AI</h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                    Born from Stanford's cutting-edge research, Medicare is transforming healthcare through innovative AI solutions that make medical imaging faster, safer, and more accessible worldwide.
+                </p>
+            </div>
+
+            <!-- Company Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-medical-blue mb-2">500+</div>
+                    <div class="text-gray-600">Hospitals Served</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-medical-blue mb-2">25M+</div>
+                    <div class="text-gray-600">Patients Impacted</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-medical-blue mb-2">50+</div>
+                    <div class="text-gray-600">Countries</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-medical-blue mb-2">98%</div>
+                    <div class="text-gray-600">Satisfaction Rate</div>
+                </div>
+            </div>
+
+            <!-- Leadership Team -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold text-gray-900 text-center mb-12">Leadership Team</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- @MAP: teamMembers.map(member => ( -->
+                    
+                    <!-- Team Member 1 -->
+                    <div class="text-center">
+                        <!-- Professional headshot of medical AI executive -->
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" alt="Dr. Sarah Chen, Chief Executive Officer" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Dr. Sarah Chen</h4>
+                        <p class="text-medical-blue font-medium mb-2">Chief Executive Officer</p>
+                        <p class="text-gray-600 text-sm">Former Stanford Radiology, 15+ years in medical AI</p>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="text-center">
+                        <!-- Professional headshot of medical technology leader -->
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" alt="Dr. Michael Rodriguez, Chief Technology Officer" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Dr. Michael Rodriguez</h4>
+                        <p class="text-medical-blue font-medium mb-2">Chief Technology Officer</p>
+                        <p class="text-gray-600 text-sm">PhD Computer Vision, Former Google AI Health</p>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="text-center">
+                        <!-- Professional headshot of medical professional -->
+                        <img src="https://pixabay.com/get/ge4acfd18d50704c677be977bdc2c27b9c27afb7038338bf8c1083ac07399262e63141d6237c5ebc8231796000245e6804c88ce3d27271df7c943e0d66dbb4851_1280.jpg" alt="Dr. Emily Thompson, Chief Medical Officer" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Dr. Emily Thompson</h4>
+                        <p class="text-medical-blue font-medium mb-2">Chief Medical Officer</p>
+                        <p class="text-gray-600 text-sm">Board-certified Radiologist, Mayo Clinic alumna</p>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="text-center">
+                        <!-- Professional headshot of business executive -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" alt="James Wilson, Chief Commercial Officer" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">James Wilson</h4>
+                        <p class="text-medical-blue font-medium mb-2">Chief Commercial Officer</p>
+                        <p class="text-gray-600 text-sm">Former Philips Healthcare, Global sales leader</p>
+                    </div>
+                    
+                    <!-- @END_MAP )) -->
+                </div>
+            </div>
+
+            <!-- Company Values -->
+            <div class="bg-gray-50 rounded-2xl p-12">
+                <h3 class="text-3xl font-bold text-gray-900 text-center mb-12">Our Values</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-medical-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Patient First</h4>
+                        <p class="text-gray-600">Every decision we make prioritizes patient safety, comfort, and care quality.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-medical-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-lightbulb text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Innovation</h4>
+                        <p class="text-gray-600">We push the boundaries of what's possible in medical imaging through cutting-edge AI.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-medical-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Trust</h4>
+                        <p class="text-gray-600">We build transparent, reliable solutions that healthcare professionals can depend on.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Company Information -->
+
+    <!-- @COMPONENT: Resource Center [Whitepapers and research] -->
+    <section id="resources" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Research & Resources</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Access peer-reviewed research, technical documentation, and clinical evidence supporting our AI solutions
+                </p>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="mb-12">
+                <div class="max-w-2xl mx-auto">
+                    <div class="relative">
+                        <input type="text" placeholder="Search resources..." class="w-full px-6 py-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-medical-blue focus:border-transparent text-lg" data-implementation="Implement search functionality">
+                        <button class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <i class="fas fa-search text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Resource Categories -->
+                <div class="flex flex-wrap justify-center gap-4 mt-8">
+                    <button class="px-6 py-2 bg-medical-blue text-white rounded-full font-medium" data-filter="all">All</button>
+                    <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition-colors" data-filter="research">Research Papers</button>
+                    <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition-colors" data-filter="whitepapers">Whitepapers</button>
+                    <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition-colors" data-filter="case-studies">Case Studies</button>
+                    <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition-colors" data-filter="technical">Technical Docs</button>
+                </div>
+            </div>
+
+            <!-- Resources Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- @MAP: resources.map(resource => ( -->
+                
+                <!-- Resource 1 -->
+                <div class="bg-white rounded-2xl shadow-lg hover-lift overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-medical-blue text-white text-xs px-3 py-1 rounded-full">RESEARCH PAPER</span>
+                            <span class="text-gray-500 text-sm">Dec 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">AI-Enhanced MRI: Clinical Validation Results</h3>
+                        <p class="text-gray-600 mb-4">
+                            Comprehensive study of 1,000+ patients demonstrating 75% reduction in scan times with maintained diagnostic accuracy.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500 text-sm">Published in Nature Medicine</span>
+                            <button class="text-medical-blue hover:text-medical-dark font-medium" data-event="click:downloadResource">
+                                Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resource 2 -->
+                <div class="bg-white rounded-2xl shadow-lg hover-lift overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-success text-white text-xs px-3 py-1 rounded-full">WHITEPAPER</span>
+                            <span class="text-gray-500 text-sm">Nov 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">ROI Calculator: AI in Medical Imaging</h3>
+                        <p class="text-gray-600 mb-4">
+                            Detailed analysis of cost savings and efficiency gains from implementing AI-powered imaging solutions.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500 text-sm">14 pages • Free download</span>
+                            <button class="text-medical-blue hover:text-medical-dark font-medium" data-event="click:downloadResource">
+                                Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resource 3 -->
+                <div class="bg-white rounded-2xl shadow-lg hover-lift overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-warning text-white text-xs px-3 py-1 rounded-full">CASE STUDY</span>
+                            <span class="text-gray-500 text-sm">Oct 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Stanford Medical: Implementation Success</h3>
+                        <p class="text-gray-600 mb-4">
+                            How Stanford Medical Center achieved 60% faster MRI scans while improving patient satisfaction.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500 text-sm">8 pages • Real outcomes</span>
+                            <button class="text-medical-blue hover:text-medical-dark font-medium" data-event="click:downloadResource">
+                                Read Case
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resource 4 -->
+                <div class="bg-white rounded-2xl shadow-lg hover-lift overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-gray-600 text-white text-xs px-3 py-1 rounded-full">TECHNICAL</span>
+                            <span class="text-gray-500 text-sm">Sep 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Integration Guide: PACS Systems</h3>
+                        <p class="text-gray-600 mb-4">
+                            Technical documentation for seamless integration with existing PACS and imaging workflows.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500 text-sm">25 pages • For IT teams</span>
+                            <button class="text-medical-blue hover:text-medical-dark font-medium" data-event="click:downloadResource">
+                                View Docs
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resource 5 -->
+                <div class="bg-white rounded-2xl shadow-lg hover-lift overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-medical-light text-white text-xs px-3 py-1 rounded-full">WEBINAR</span>
+                            <span class="text-gray-500 text-sm">Aug 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Future of AI in Radiology</h3>
+                        <p class="text-gray-600 mb-4">
+                            Expert panel discussion on emerging trends and technologies in AI-powered medical imaging.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500 text-sm">60 min • On-demand</span>
+                            <button class="text-medical-blue hover:text-medical-dark font-medium" data-event="click:watchWebinar">
+                                Watch Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resource 6 -->
+                <div class="bg-white rounded-2xl shadow-lg hover-lift overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-medical-blue text-white text-xs px-3 py-1 rounded-full">RESEARCH PAPER</span>
+                            <span class="text-gray-500 text-sm">Jul 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Synthetic Imaging: Breakthrough Study</h3>
+                        <p class="text-gray-600 mb-4">
+                            First clinical study demonstrating zero-acquisition-time synthetic STIR imaging with maintained quality.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500 text-sm">Published in Radiology</span>
+                            <button class="text-medical-blue hover:text-medical-dark font-medium" data-event="click:downloadResource">
+                                Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- @END_MAP )) -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="bg-medical-light text-white px-8 py-4 rounded-lg hover:bg-medical-blue transition-colors font-medium" data-event="click:loadMoreResources">
+                    Load More Resources
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Resource Center -->
+
+    <!-- @COMPONENT: Newsletter Subscription [Lead capture] -->
+    <section class="py-20 bg-medical-blue">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Stay Updated with Medical AI Innovations</h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Get the latest research, product updates, and industry insights delivered to your inbox monthly.
+            </p>
+            
+            <!-- Newsletter Form -->
+            <div class="max-w-2xl mx-auto">
+                <form class="flex flex-col sm:flex-row gap-4" data-implementation="Integrate with email marketing platform">
+                    <input type="email" placeholder="Enter your email address" class="flex-1 px-6 py-4 rounded-lg border-0 focus:ring-2 focus:ring-white text-lg" data-mock="true">
+                    <button type="submit" class="bg-white text-medical-blue px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold" data-event="click:subscribeNewsletter">
+                        Subscribe
+                    </button>
+                </form>
+                <p class="text-blue-100 text-sm mt-4">
+                    Join 10,000+ healthcare professionals. Unsubscribe anytime.
+                </p>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="text-center">
+                    <i class="fas fa-shield-alt text-white text-2xl mb-3"></i>
+                    <div class="text-white font-medium">HIPAA Compliant</div>
+                    <div class="text-blue-100 text-sm">Your data is protected</div>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-clock text-white text-2xl mb-3"></i>
+                    <div class="text-white font-medium">Monthly Updates</div>
+                    <div class="text-blue-100 text-sm">No spam, just insights</div>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-users text-white text-2xl mb-3"></i>
+                    <div class="text-white font-medium">Expert Content</div>
+                    <div class="text-blue-100 text-sm">From industry leaders</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Newsletter Subscription -->
+
+    <!-- @COMPONENT: Footer [Complete site navigation] -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-heartbeat text-medical-blue text-2xl mr-2"></i>
+                        <span class="text-2xl font-bold">Medicare</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Transforming healthcare through innovative AI solutions for medical imaging.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Products -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Products</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">MedicareHD™</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">MedicarePET™</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">MedicareSYNTH™</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">MedicareALIGN™</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Product Comparison</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Research Papers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Technical Docs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Webinars</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">News</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Leadership</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Partners</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 mb-4 md:mb-0">
+                        © 2024 Medicare. All rights reserved.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">GDPR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- @COMPONENT: Cookie Consent [Privacy compliance] -->
+    <div id="cookieConsent" class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50 p-4" style="display: none;" data-implementation="Show on first visit, hide after acceptance">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex-1">
+                <p class="text-gray-700">
+                    We use cookies to enhance your experience and analyze site usage. 
+                    <a href="#" class="text-medical-blue hover:text-medical-dark">Learn more</a>
+                </p>
+            </div>
+            <div class="flex gap-3">
+                <button class="text-gray-600 hover:text-gray-800 px-4 py-2 border border-gray-300 rounded-lg transition-colors" data-event="click:rejectCookies">
+                    Decline
+                </button>
+                <button class="bg-medical-blue text-white px-6 py-2 rounded-lg hover:bg-medical-dark transition-colors" data-event="click:acceptCookies">
+                    Accept
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: Cookie Consent -->
+
+    <!-- @COMPONENT: Live Chat Widget [Customer support] -->
+    <div id="chatWidget" class="fixed bottom-6 right-6 z-50">
+        <button class="bg-medical-blue text-white p-4 rounded-full shadow-lg hover:bg-medical-dark transition-colors" data-event="click:openChat" data-implementation="Integrate with live chat service">
+            <i class="fas fa-comments text-xl"></i>
+        </button>
+    </div>
+    <!-- @END_COMPONENT: Live Chat Widget -->
+
+    <script>
+        // TODO: Implement business logic, API calls, and state management
+        
+        (function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('[data-event="click:toggleMobileMenu"]');
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    // TODO: Implement mobile menu toggle
+                    console.log('Mobile menu toggle clicked');
+                });
+            }
+
+            // Demo booking form submission
+            const demoForm = document.querySelector('form[data-implementation*="calendar"]');
+            if (demoForm) {
+                demoForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Integrate with calendar booking system
+                    console.log('Demo booking form submitted');
+                });
+            }
+
+            // Newsletter subscription
+            const newsletterForm = document.querySelector('form[data-implementation*="email"]');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Integrate with email marketing platform
+                    console.log('Newsletter subscription submitted');
+                });
+            }
+
+            // Cookie consent
+            const cookieConsent = document.getElementById('cookieConsent');
+            if (cookieConsent && !localStorage.getItem('cookiesAccepted')) {
+                cookieConsent.style.display = 'block';
+            }
+
+            // Accept cookies
+            document.querySelector('[data-event="click:acceptCookies"]')?.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieConsent.style.display = 'none';
+            });
+
+            // Reject cookies
+            document.querySelector('[data-event="click:rejectCookies"]')?.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'false');
+                cookieConsent.style.display = 'none';
+            });
+
+            // Resource filter functionality
+            document.querySelectorAll('[data-filter]').forEach(button => {
+                button.addEventListener('click', function() {
+                    // TODO: Implement resource filtering
+                    document.querySelectorAll('[data-filter]').forEach(btn => {
+                        btn.classList.remove('bg-medical-blue', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+                    this.classList.remove('bg-gray-200', 'text-gray-700');
+                    this.classList.add('bg-medical-blue', 'text-white');
+                    console.log('Filter clicked:', this.dataset.filter);
+                });
+            });
+
+            // Navbar background on scroll
+            window.addEventListener('scroll', function() {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 50) {
+                    nav.classList.add('bg-white/98');
+                    nav.classList.remove('bg-white/95');
+                } else {
+                    nav.classList.add('bg-white/95');
+                    nav.classList.remove('bg-white/98');
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>
