@@ -4,7 +4,7 @@ import { storage } from "./storage";
 import { insertDemoBookingSchema, insertNewsletterSchema, insertContactSchema } from "@shared/schema";
 import { z } from "zod";
 
-export async function registerRoutes(app: Express): Promise<Server> {
+export async function registerRoutes(app: Express): Promise<void> {
   // Demo booking routes
   app.post("/api/demo-bookings", async (req, res) => {
     try {
@@ -82,6 +82,4 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  const httpServer = createServer(app);
-  return httpServer;
 }
