@@ -49,7 +49,7 @@ app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
 });
 
 // Setup static file serving for production
-if (app.get("env") === "production") {
+if (process.env.NODE_ENV === "production") {
   serveStatic(app);
 } else {
   // In development, we'll set up Vite middleware in the dev server

@@ -122,9 +122,21 @@ export class MemStorage implements IStorage {
   }
 }
 
-import { DbStorage } from "./db-storage";
-
 // Use database storage in production, memory storage in development
 export const storage = process.env.NODE_ENV === "production" 
-  ? new DbStorage() 
+  ? (() => {
+      try {
+        // Only import database storage if DATABASE_URL is available
+        if (process.env.DATABASE_URL) {
+          const { DbStorage } = require("./db-storage");
+          return new DbStorage();
+        } else {
+          console.warn("DATABASE_URL not set, using memory storage");
+          return new MemStorage();
+        }
+      } catch (error) {
+        console.error("Failed to initialize database storage:", error);
+        return new MemStorage();
+      }
+    })()
   : new MemStorage();
