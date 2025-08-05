@@ -5,6 +5,16 @@ import { insertDemoBookingSchema, insertNewsletterSchema, insertContactSchema } 
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<void> {
+  // Health check endpoint
+  app.get("/api/health", (req, res) => {
+    res.json({ 
+      status: "ok", 
+      timestamp: new Date().toISOString(),
+      environment: process.env.NODE_ENV,
+      vercel: !!process.env.VERCEL
+    });
+  });
+
   // Demo booking routes
   app.post("/api/demo-bookings", async (req, res) => {
     try {
